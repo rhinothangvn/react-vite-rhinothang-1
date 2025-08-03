@@ -8,14 +8,20 @@ const App = () => {
   const age = 18;
   const data = ["Learning React", "Watch Youtube"];
 
+  const addNewToDo = (name) => {
+    alert(`Add new: ${name}`);
+  }
+
+
   return (
     <div className="todo-container">
       <div className="todo-title">To Do List</div>
-      <ToDoNew />
+      <ToDoNew addNewToDo={addNewToDo}/>
       <ToDoData 
       name = {hoidanit}
       age = {age}
       data = {data}
+      
       />
       <div className="todo-image">
         <img src={reactLogo} alt="React Logo" className="logo" />
