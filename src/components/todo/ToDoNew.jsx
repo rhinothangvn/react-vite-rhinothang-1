@@ -1,26 +1,34 @@
+import { useState } from "react";
+
 const ToDoNew = (props) => {
-  console.log(">>> check poit:", props);
+
+//const inputValue = "Rhino Thang";
+  // Destructuring props
+  const [ inputValue, setInputValue ] = useState("Rhino Thang");
 
   const { addNewToDo } = props;
 
   // addNewToDo("Rhino Thang");
   const handleClick = () => {
-    alert("Add new task");
-    addNewToDo("Rhino Thang");
+    console.log("Adding new ToDo:", inputValue);
   };
 
-const handleOnChange = (name) => {
-    console.log(">>> check handle onChange",name);
-}
+  const handleOnChange = (name) => {
+    setInputValue(name);
+  };
 
   return (
     <div className="todo-new">
-      <input type="text" placeholder="Add a new task" title="Add a new task"  
-      onChange={(event) => handleOnChange(event.target.value)}/>
-      <button style={{ cursor: "pointer" }} 
-      onClick={handleClick}>
+      <input
+        type="text"
+        placeholder="Add a new task"
+        title="Add a new task"
+        onChange={(event) => handleOnChange(event.target.value)}
+      />
+      <button style={{ cursor: "pointer" }} onClick={handleClick}>
         Add
       </button>
+      <div>My input is: {inputValue}</div>
     </div>
   );
 };

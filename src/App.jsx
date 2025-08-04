@@ -3,10 +3,23 @@ import ToDoData from "./components/todo/ToDoData";
 import ToDoNew from "./components/todo/ToDoNew";
 import reactLogo from "./assets/react.svg";
 
+import { useState } from "react";
+
 const App = () => {
+
+  const [todoList, setTodoList] = useState([
+    { id: 1, name: "Learning React"},
+    { id: 2, name: "Watching YouTube"},
+    { id: 3, name: "Building a project"}
+  ]);
+
+
+
   const hoidanit = "Rhino Thang";
   const age = 18;
   const data = ["Learning React", "Watch Youtube"];
+
+  const [inputValue, setInputValue] = useState("Rhino Thang");
 
   const addNewToDo = (name) => {
     alert(`Add new: ${name}`);
@@ -21,6 +34,7 @@ const App = () => {
       name = {hoidanit}
       age = {age}
       data = {data}
+      todoList={todoList}
       
       />
       <div className="todo-image">
