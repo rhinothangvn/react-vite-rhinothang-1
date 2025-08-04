@@ -1,41 +1,39 @@
 .todo-container {
-margin: 50px auto;
-width: 600px;
-border: 1px solid #ccc  ;
-border-radius: 10px;
-padding: 20px;
+  margin: 50px auto;
+  width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
 }
 
-
-.todo-title{
-    font-size: 35px;
-    margin: 15px, 0;
-    font-weight: 600;
-    color:orange;
-    text-align: center;
+.todo-title {
+  font-size: 35px;
+  margin: 15px, 0;
+  font-weight: 600;
+  color: orange;
+  text-align: center;
 }
 
-
-.todo-new{
-    width: 100%;
-    display: flex;
-    gap: 15px;
-    justify-content: center;
+.todo-new {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
 }
 
-.todo-data{
-    margin-top: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.todo-data {
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.todo-image{
-    text-align: center;
-    margin-top: 15px;
+.todo-image {
+  text-align: center;
+  margin-top: 15px;
 }
 
 .logo {
@@ -66,4 +64,7 @@ padding: 20px;
   }
 }
 
-
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+}

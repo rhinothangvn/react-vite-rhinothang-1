@@ -9,7 +9,10 @@ const ToDoNew = (props) => {
   const { addNewToDo } = props;
 
   // addNewToDo("Rhino Thang");
-  const handleClick = () => {addNewToDo(inputValue);
+  const handleClick = () => {
+    addNewToDo(inputValue);
+    
+    setInputValue("");
   };
 
   const handleOnChange = (name) => {
@@ -23,6 +26,7 @@ const ToDoNew = (props) => {
         placeholder="Add a new task"
         title="Add a new task"
         onChange={(event) => handleOnChange(event.target.value)}
+        value={inputValue}
       />
       <button style={{ cursor: "pointer" }} onClick={handleClick}>
         Add
