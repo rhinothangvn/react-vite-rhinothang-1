@@ -9,8 +9,7 @@ const ToDoNew = (props) => {
   const { addNewToDo } = props;
 
   // addNewToDo("Rhino Thang");
-  const handleClick = () => {
-    console.log("Adding new ToDo:", inputValue);
+  const handleClick = () => {addNewToDo(inputValue);
   };
 
   const handleOnChange = (name) => {

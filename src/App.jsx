@@ -22,7 +22,16 @@ const App = () => {
   const [inputValue, setInputValue] = useState("Rhino Thang");
 
   const addNewToDo = (name) => {
-    alert(`Add new: ${name}`);
+    const newToDo = {
+      id: randomIntFromInterval(1, 1000), // Random ID for the new task
+      name: name,
+    }
+
+    setTodoList([...todoList, newToDo]);
+  }
+
+  const randomIntFromInterval = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
 
