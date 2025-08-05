@@ -31,7 +31,6 @@ const ToDoNew = (props) => {
       <button style={{ cursor: "pointer" }} onClick={handleClick}>
         Add
       </button>
-      <div>My input is: {inputValue}</div>
     </div>
   );
 };
